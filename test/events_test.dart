@@ -1,9 +1,9 @@
-import 'package:dispatch_events/events.dart';
+import 'package:custom_events/custom_events.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('add and initialize event', () {
-    Event evt = Event.instance;
+    CustomEvents evt = CustomEvents.instance;
     bool init = false;
 
     // change variable
@@ -18,7 +18,7 @@ void main() {
   });
 
   test('count listener events', () {
-    Event evt = Event.instance;
+    CustomEvents evt = CustomEvents.instance;
     int counter = 0;
 
     evt.addEventListener(EventType.START, (_) => counter++);
@@ -39,7 +39,7 @@ void main() {
   });
 
   test('multiple event types with different listeners', () {
-    Event evt = Event.instance;
+    CustomEvents evt = CustomEvents.instance;
     int startCounter = 0;
     int stopCounter = 0;
 
@@ -55,7 +55,7 @@ void main() {
   });
 
   test('count listener events with removal of specific listener', () {
-    Event evt = Event.instance;
+    CustomEvents evt = CustomEvents.instance;
     int counter = 0;
 
     void incrementCounter(_) => counter++;

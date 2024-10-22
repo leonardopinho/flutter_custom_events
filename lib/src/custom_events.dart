@@ -3,14 +3,14 @@ import 'package:uuid/uuid.dart';
 import 'abstract_event.dart';
 import 'event_item.dart';
 
-class Event extends AbstractEvent {
+class CustomEvents extends AbstractEvent {
   final List<EventItem> _listeners = <EventItem>[];
 
-  Event._privateConstructor();
+  CustomEvents._privateConstructor();
 
-  static final Event _instance = Event._privateConstructor();
+  static final CustomEvents _instance = CustomEvents._privateConstructor();
 
-  static Event get instance => _instance;
+  static CustomEvents get instance => _instance;
 
   String _getUuid() {
     var uuid = const Uuid();

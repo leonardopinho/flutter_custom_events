@@ -1,6 +1,6 @@
-import 'package:events/events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:custom_events/custom_events.dart';
 
 void main() {
   testWidgets('Event is received by SecondWidget when dispatched from FirstWidget', (WidgetTester tester) async {
@@ -31,7 +31,7 @@ class FirstWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        Event.instance.dispatchEvent('my_event', value: 'Hello from FirstWidget');
+        CustomEvents.instance.dispatchEvent('my_event', value: 'Hello from FirstWidget');
       },
       child: const Text('Dispatch Event'),
     );
@@ -51,7 +51,7 @@ class _SecondWidgetState extends State<SecondWidget> {
   @override
   void initState() {
     super.initState();
-    Event.instance.addEventListener('my_event', (value) {
+    CustomEvents.instance.addEventListener('my_event', (value) {
       setState(() {
         receivedMessage = value;
       });
