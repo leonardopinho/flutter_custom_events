@@ -1,4 +1,4 @@
-import 'package:events/events.dart';
+import 'package:Events/events.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
