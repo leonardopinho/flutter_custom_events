@@ -1,4 +1,4 @@
-import 'package:Events/events.dart';
+import 'package:dispatch_events/events.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
