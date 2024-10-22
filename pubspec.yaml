@@ -1,4 +1,4 @@
-name: dispatcher_events
+name: dispatch_events
 description: "The package provides an effective way to manage custom events in an application."
 version: 0.0.1
 homepage: https://github.com/leonardopinho/flutter_events
