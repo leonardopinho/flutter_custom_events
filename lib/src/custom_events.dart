@@ -42,7 +42,7 @@ class CustomEvents extends AbstractEvent {
   void dispatchEvent(dynamic state, {dynamic value}) {
     for (var item in _listeners) {
       if (item.state == state) {
-        item.function(value);
+        value != null ? item.function(value) : item.function();
       }
     }
   }
