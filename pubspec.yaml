@@ -1,6 +1,6 @@
 name: custom_events
 description: "The package provides an effective way to manage custom events in an application."
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/leonardopinho/flutter_custom_events
 
 environment:
