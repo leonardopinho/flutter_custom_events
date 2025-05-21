@@ -9,7 +9,7 @@ This package helps you manage custom events in Flutter apps in a simple and ligh
 * Simple listener management.
 * Uses the **Singleton** pattern for centralized event control.
 
-## 🛠️ Usage
+## Usage
 
 ### Adding Listeners:
 ```dart
